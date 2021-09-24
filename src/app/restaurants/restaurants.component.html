@@ -1,0 +1,24 @@
+<div class="header">
+    <h1>Welcome to the best Restaurants in the city</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3 card" *ngFor="let data of allData" (click)="getDetails(data.id)">
+                <div class="text-center">
+                    <img src={{data.restaurantImage}}  class="card-img" alt="...">
+                </div>
+                <div class="card-body">
+                    <hr>
+                    <h2>{{data.restaurantName}}</h2>
+                    <hr>
+                    <h4 class="card-title">{{data.restaurantDescription}}</h4>
+                    <span *ngIf="data.isOpen"><button class="btn btn-primary">Open</button> </span>
+                    <span *ngIf="!data.isOpen"><button class="btn btn-danger">Closed</button></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

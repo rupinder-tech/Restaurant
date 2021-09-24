@@ -1,0 +1,37 @@
+<div class="header">
+    <h1>Details of your Favourite Restaurant</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row" *ngFor="let data of details">
+            <div class="col-md-6 texts" *ngIf="data.id == this.id">
+                <h1 class="h1">{{data.restaurantName}}</h1>
+                <h4>{{data.restaurantDescription}}</h4>
+                <h4><i class="fa fa-clock-o" aria-hidden="true"></i> {{data.openingHours}}</h4> 
+                <h4>{{data.contactNumber}}</h4>
+                <a href={{data.websiteUrl}}>{{data.websiteUrl}}</a>
+            </div>
+            <div class="col-md-6" *ngIf="data.id == this.id">
+                <img src={{data.restaurantImage}}  class="card-img" alt="...">
+            </div>
+    </div>
+</div>
+
+<div class="header">
+    <h1>List of Menu Items</h1>
+</div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3 card" *ngFor="let data of menus">
+                <div class="text-center">
+                    <img src={{data.itemPhoto}}  class="img" alt="...">
+                </div>
+                <div class="card-body">
+                   <h3>{{data.itemName}}</h3>
+                   <h4>${{data.itemCost}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
