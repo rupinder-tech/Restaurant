@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { Menu } from '../Bean/menu';
+import { Menu } from '../Bean/Menu';
 import { RestaurantDetails } from '../Bean/RestaurantDetail';
 import { RestaurantService } from '../restaurant.service';
 
